@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .green {
+            color: #009900;
+            font-weight: bold;
+        }
+
+        .red {
+            color: #990000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+{% for pack in funds %}
+{{ pack.pack }} <span class="{{ pack.style }}">{{ pack.change }}</span>
+<br>
+{% endfor %}
+<div class="{{ res_style }}">{{ result }}</div>
+<a href="/admin/">Admin</a>
+</body>
+</html>
